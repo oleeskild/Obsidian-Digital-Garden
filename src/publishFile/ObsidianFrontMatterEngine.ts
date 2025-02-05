@@ -1,4 +1,5 @@
 import { MetadataCache, TFile, Vault } from "obsidian";
+import { FRONTMATTER_REGEX } from "../utils/regexes";
 
 export interface IFrontMatterEngine {
 	set(key: string, value: string | boolean | number): IFrontMatterEngine;
@@ -43,12 +44,11 @@ export default class ObsidianFrontMatterEngine implements IFrontMatterEngine {
 		const newFrontMatter = this.getFrontMatterSnapshot();
 
 		const content = await this.vault.cachedRead(this.file);
-		const frontmatterRegex = /^\s*?---\n([\s\S]*?)\n---/g;
 		const yaml = this.frontMatterToYaml(newFrontMatter);
 		let newContent = "";
 
-		if (content.match(frontmatterRegex)) {
-			newContent = content.replace(frontmatterRegex, (_match) => {
+		if (content.match(FRONTMATTER_REGEX)) {
+			newContent = content.replace(FRONTMATTER_REGEX, (_match) => {
 				return yaml;
 			});
 		} else {

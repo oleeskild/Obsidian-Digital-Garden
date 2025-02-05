@@ -1,6 +1,6 @@
 export function replaceBlockIDs(markdown: string) {
 	const block_pattern = / \^([\w\d-]+)/g;
-	const complex_block_pattern = /\n\^([\w\d-]+)\n/g;
+	const complex_block_pattern = /[\r\n]\^([\w\d-]+)[\r\n]/g;
 
 	// To ensure code blocks are not modified...
 	const codeBlockPattern = /```[\s\S]*?```/g;
