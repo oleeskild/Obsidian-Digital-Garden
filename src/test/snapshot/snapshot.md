@@ -731,6 +731,8 @@ I'm a list of all files in this folder:
 - [[P Plugins/PD Dataview/PD2 Inline queries\|PD2 Inline queries]]
 - [[P Plugins/PD Dataview/PD3 Inline JS queries\|PD3 Inline JS queries]]
 - [[P Plugins/PD Dataview/PD4 DataviewJs queries\|PD4 DataviewJs queries]]
+- [[P Plugins/PD Dataview/PD5.1 Dataview in transclusions\|PD5.1 Dataview in transclusions]]
+- [[P Plugins/PD Dataview/PD5.2 Dataview in transclusions\|PD5.2 Dataview in transclusions]]
 - [[P Plugins/PE Excalidraw/PE1 Transcluded excalidraw\|PE1 Transcluded excalidraw]]
 - [[P Plugins/PE Excalidraw/PE2 excalidraw with image\|PE2 excalidraw with image]]
 
@@ -764,7 +766,7 @@ P Plugins/PD Dataview/PD3 Inline JS queries.md
 
 
 3
-108
+112
 <p><span>A paragraph</span></p>
 
 /img/user/A Assets/travolta.png
@@ -782,6 +784,48 @@ P Plugins/PD Dataview/PD4 DataviewJs queries.md
 <div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span>name</span><span class="dataview small-text">6</span></th><th class="table-view-th"><span>link</span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span>005 Custom filters</span></td><td><span><a data-tooltip-position="top" aria-label="005 Custom filters.md" data-href="005 Custom filters.md" href="005 Custom filters.md" class="internal-link" target="_blank" rel="noopener">005 Custom filters</a></span></td></tr><tr><td><span>006 Custom title</span></td><td><span><a data-tooltip-position="top" aria-label="006 Custom title.md" data-href="006 Custom title.md" href="006 Custom title.md" class="internal-link" target="_blank" rel="noopener">006 Custom title</a></span></td></tr><tr><td><span>007 Custom permalink</span></td><td><span><a data-tooltip-position="top" aria-label="007 Custom permalink.md" data-href="007 Custom permalink.md" href="007 Custom permalink.md" class="internal-link" target="_blank" rel="noopener">007 Custom permalink</a></span></td></tr><tr><td><span>011 Custom updatedAt</span></td><td><span><a data-tooltip-position="top" aria-label="011 Custom updatedAt.md" data-href="011 Custom updatedAt.md" href="011 Custom updatedAt.md" class="internal-link" target="_blank" rel="noopener">011 Custom updatedAt</a></span></td></tr><tr><td><span>013 Custom path</span></td><td><span><a data-tooltip-position="top" aria-label="013 Custom path.md" data-href="013 Custom path.md" href="013 Custom path.md" class="internal-link" target="_blank" rel="noopener">013 Custom path</a></span></td></tr><tr><td><span>014 Customer path and permalink</span></td><td><span><a data-tooltip-position="top" aria-label="014 Customer path and permalink.md" data-href="014 Customer path and permalink.md" href="014 Customer path and permalink.md" class="internal-link" target="_blank" rel="noopener">014 Customer path and permalink</a></span></td></tr></tbody></table></div>
 
 
+/img/user/A Assets/travolta.png
+,/img/user/A Assets/unused_image.png
+,/img/user/A Assets/travolta.webp
+==========
+P Plugins/PD Dataview/PD5.1 Dataview in transclusions.md
+==========
+---
+{"dg-publish":true,"permalink":"/p-plugins/pd-dataview/pd-5-1-dataview-in-transclusions/"}
+---
+
+This should say "bar" ->  bar
+
+This should be a working link -> [kagi](https://kagi.com)
+
+See if those tran: [[P Plugins/PD Dataview/PD5.2 Dataview in transclusions\|PD5.2 Dataview in transclusions]]
+/img/user/A Assets/travolta.png
+,/img/user/A Assets/unused_image.png
+,/img/user/A Assets/travolta.webp
+==========
+P Plugins/PD Dataview/PD5.2 Dataview in transclusions.md
+==========
+---
+{"dg-publish":true,"permalink":"/p-plugins/pd-dataview/pd-5-2-dataview-in-transclusions/"}
+---
+
+Transcluding the Dataview-containing [[P Plugins/PD Dataview/PD5.1 Dataview in transclusions\|PD5.1 Dataview in transclusions]] file below:
+
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/p-plugins/pd-dataview/pd-5-1-dataview-in-transclusions/" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+
+
+
+
+This should say "bar" ->  bar
+
+This should be a working link -> [kagi](https://kagi.com)
+
+See if those tran: [[P Plugins/PD Dataview/PD5.2 Dataview in transclusions\|PD5.2 Dataview in transclusions]]
+
+</div></div>
+
+
+The transcluded, Dataview-containing transclusion above should have been processed as expected with the Dataview having been processed. e.g. the text and link should use the frontmatter from the original file per the Dataview queries in that file.
 /img/user/A Assets/travolta.png
 ,/img/user/A Assets/unused_image.png
 ,/img/user/A Assets/travolta.webp

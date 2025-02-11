@@ -462,6 +462,13 @@ export class GardenPageCompiler {
 							)(publishLinkedFile)(fileText);
 						}
 
+						// compile dataview in transcluded text
+						const withDvCompiledText = await this.runCompilerSteps(
+							publishLinkedFile,
+							[this.convertDataViews],
+						)(fileText);
+						fileText = withDvCompiledText;
+
 						//This should be recursive up to a certain depth
 						transcludedText = transcludedText.replace(
 							transclusionMatch,
