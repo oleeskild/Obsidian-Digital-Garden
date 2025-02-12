@@ -123,11 +123,11 @@ export class GithubSettings {
 
 		desc.createEl("span", undefined, (span) => {
 			span.innerText =
-				"A GitHub token with repo permissions. You can generate it ";
+				"A GitHub token with contents permissions. You can see how to generate it ";
 
 			span.createEl("a", undefined, (link) => {
 				link.href =
-					"https://github.com/settings/tokens/new?scopes=repo";
+					"https://dg-docs.ole.dev/advanced/fine-grained-access-token/";
 				link.innerText = "here!";
 			});
 		});
