@@ -832,10 +832,10 @@ This subfolder also contains path rewrite testing!
 ,/img/user/A Assets/unused_image.png
 ,/img/user/A Assets/travolta.webp
 ==========
-Path Rewriting/Subfolder/How deep do the rewrite rules go?.md
+Path Rewriting/Subfolder/How deep do the rewrite rules go.md
 ==========
 ---
-{"dg-publish":true,"dg-path":"Subfolder/How deep do the rewrite rules go?.md","permalink":"/subfolder/how-deep-do-the-rewrite-rules-go/"}
+{"dg-publish":true,"dg-path":"Subfolder/How deep do the rewrite rules go.md","permalink":"/subfolder/how-deep-do-the-rewrite-rules-go/"}
 ---
 
 With the rewrite rules: 
